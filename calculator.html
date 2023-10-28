@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            background: #222;
+        }
+        .calculator
+        {
+           
+            width: 300px;
+            padding: 20px ;
+            font-size: 20px;
+            margin: 50px auto;
+            border-radius: 15px;
+            box-shadow:  0 0 8px teal;
+        }
+       input
+       {
+        height: 50px;
+        width: 280px;
+        border: none;
+        font-size: 45px;
+        background: #222;
+        color: white;
+        margin-top: 30px;
+       }
+       input:focus
+       {
+        outline: none;
+       }
+       .btns
+       {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 10px;
+        margin: 25px 0px 10px 0;
+        
+       }
+       .btn1
+       {
+        height: 50px;
+        width: 50px;
+        box-shadow: 0 0 5px teal;
+        border-radius: 5px;
+        color: teal;
+        text-align: center;
+        line-height: 50px;
+        margin: 10px auto;
+        font-size: 25px;
+        font-weight: 900;
+       } 
+       .equal
+       {
+        background: orangered;
+       }
+    </style>
+</head>
+<body>
+
+    <div class="calculator">
+
+        <input type="text" class="inp">
+
+        <div class="btns">
+
+            <div class="btn1" onclick="inp.value = ''">AC</div> 
+            <div class="btn1" onclick="inp.value = inp.value.slice(0,-1)">DE</div> 
+            <div class="btn1" onclick=" inp.value += '/'">/</div> 
+            <div class="btn1"onclick=" inp.value += '.' ">.</div>
+            <div class="btn1" onclick=" inp.value += '7'">7</div>
+            <div class="btn1" onclick=" inp.value += '8'">8</div>
+            <div class="btn1" onclick=" inp.value += '9'">9</div>
+            <div class="btn1" onclick=" inp.value += '*' ">*</div>
+            <div class="btn1" onclick=" inp.value += '4'">4</div>
+            <div class="btn1" onclick=" inp.value += '5'">5</div>
+            <div class="btn1" onclick=" inp.value += '6'">6</div>
+            <div class="btn1" onclick=" inp.value += '+' ">+</div>
+            <div class="btn1" onclick=" inp.value += '1'">1</div>
+            <div class="btn1" onclick=" inp.value += '2'">2</div>
+            <div class="btn1" onclick=" inp.value += '3'">3</div>
+            <div class="btn1"onclick=" inp.value += '-' ">-</div>
+            <div class="btn1" onclick=" inp.value += '00'">00</div>
+            <div class="btn1" onclick=" inp.value += '0'">0</div>
+            <div class="btn1 equal" onclick="inp.value = eval(inp.value)">=</div>
+
+        </div>
+
+    </div>
+    
+    <script>
+
+    inp = document.querySelector(".inp");
+
+
+    </script>
+
+   
+    
+</body>
+</html>
